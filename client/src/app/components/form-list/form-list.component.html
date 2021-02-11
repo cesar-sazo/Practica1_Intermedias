@@ -1,0 +1,40 @@
+<div class="col-md-10">
+<div class="card">
+  <div class="card-body">
+    <form action="">
+      <div class="form-group">
+        <input type="text" name="Nombre" [(ngModel)]="usuario2.nombre" placeholder="Nombre" class="form-control"
+          autofocus>
+      </div>
+      <div class="form-group">
+        <textarea name="Pass" [(ngModel)]="usuario2.password" rows="2" placeholder="Pass"
+          class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="url" name="Email" [(ngModel)]="usuario2.email" placeholder="Email" class="form-control">
+      </div>
+      <button class="btn btn-success btn-block" (click)="saveuser()">
+        Save
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+<div class="col-md-4" *ngFor="let usuario of usuario">
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+      {{usuario.nombre}}
+      <button class="btn btn-danger">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+    <img class="card-img-top" [src]="usuario.image">
+    <div class="card-body">
+      <p>CONTRASENA : {{usuario.password}}</p>
+      <p>EMAIL: {{usuario.email}}</p>
+      <a [routerLink]="['/games/edit', usuario.id]" class="btn btn-info btn-block">
+        EDIT GAME
+      </a>
+    </div>
+  </div>
+</div>
