@@ -13,11 +13,12 @@ import {usuario} from '../../models/usuario';
 export class FormListComponent implements OnInit {
 
  @HostBinding('class') classes = 'row';
- usuario2: usuario ={
+ usuarioP: usuario ={
   nombre : '',
   password : '',
   email : '',
  };
+
 
 
   constructor() { 
@@ -59,15 +60,15 @@ export class FormListComponent implements OnInit {
   }
 
   saveuser(){
+    
    let  usuario22: usuario ={
-      nombre : '',
-      password : '',
-      email : '',
+      nombre : this.usuarioP.nombre,
+      password : this.usuarioP.password,
+      email : this.usuarioP.email,
      };
     
-    usuario22 = this.usuario2;
-    console.log(usuario22);
     this.usuario.push(usuario22);
-
   }
+
+
 }

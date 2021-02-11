@@ -3,15 +3,15 @@
   <div class="card-body">
     <form action="">
       <div class="form-group">
-        <input type="text" name="Nombre" [(ngModel)]="usuario2.nombre" placeholder="Nombre" class="form-control"
+        <input type="text" name="Nombre" [(ngModel)]="usuarioP.nombre" placeholder="Nombre" class="form-control"
           autofocus>
       </div>
       <div class="form-group">
-        <textarea name="Pass" [(ngModel)]="usuario2.password" rows="2" placeholder="Pass"
+        <textarea name="Pass" [(ngModel)]="usuarioP.password" rows="2" placeholder="Pass"
           class="form-control"></textarea>
       </div>
       <div class="form-group">
-        <input type="url" name="Email" [(ngModel)]="usuario2.email" placeholder="Email" class="form-control">
+        <input type="url" name="Email" [(ngModel)]="usuarioP.email" placeholder="Email" class="form-control">
       </div>
       <button class="btn btn-success btn-block" (click)="saveuser()">
         Save
@@ -27,7 +27,7 @@
       <button class="btn btn-danger">
         <i class="far fa-trash-alt"></i>
       </button>
-      
+
     </div>
     <img class="card-img-top" [src]="usuario.image">
     <div class="card-body">
@@ -39,3 +39,5 @@
     </div>
   </div>
 </div>
+
+<script src="form-list.component.ts"></script>
